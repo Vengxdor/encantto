@@ -8,9 +8,11 @@ export const site = {
 export type NavItem = { label: string; href: string };
 
 export const nav: NavItem[] = [
-  { label: 'Collections', href: '#collections' },
-  { label: 'The Craft', href: '#feature' },
-  { label: 'Visit Us', href: '#locations' },
+    { label: 'Home', href: '/' },
+    { label: 'Collections', href: '/collections' },
+    { label: 'About', href: '/about' },
+    { label: 'Visit Us', href: '/visit' },
+    { label: 'Contact', href: '/contact' },
 ];
 
 export type Product = { name: string; meta: string; price: string; placeholder: string };
