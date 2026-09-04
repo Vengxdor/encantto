@@ -1,15 +1,16 @@
 ---
 import { nav, site } from '../data/site';
+import LanSwitch from './react/LanSwitch';
 import MobileNav from './react/MobileNav';
 ---
 
-<div class="border-b border-gold/12 bg-night-2 px-6 py-2.5 text-center">
+<div class="border-b border-gold/12 bg-night-2 px-6 py-1.5 text-center">
   <span class="text-[11px] tracking-[0.22em] uppercase text-ash">{site.announcement}</span>
 </div>
 
 <header class="sticky top-0 z-40 border-b border-gold/12 bg-night/92 backdrop-blur-md">
   <div class="mx-auto flex max-w-310 items-center justify-between gap-8 px-6 py-5 md:px-8">
-    <a href="/" class="flex flex-col gap-0.75">
+    <a href="/" class="flex flex-col ">
       <span class="font-display text-[26px] font-medium tracking-[0.06em] text-bone">{site.name}</span>
       <span class="text-[9px] tracking-[0.34em] uppercase text-gold">{site.tagline}</span>
     </a>
@@ -25,14 +26,10 @@ import MobileNav from './react/MobileNav';
           </a>
         ))
       }
-      <div class="flex items-center gap-0.5 border-l border-bone/15 pl-1.5">
-        <button class="border-b border-gold px-2 py-1.5 text-[11px] tracking-[0.18em] text-bone">EN</button>
-        <span class="text-[10px] text-[#4e4a44]">/</span>
-        <button class="border-b border-transparent px-2 py-1.5 text-[11px] tracking-[0.18em] text-[#7e7871] hover:text-bone">ES</button>
-      </div>
+      <LanSwitch client:load/>
       <a
         href="tel:+14642468403"
-        class="border border-gold/40 px-5 py-2.5 text-xs tracking-[0.16em] whitespace-nowrap text-gold hover:bg-gold/10"
+        class="border border-gold/40 px-5 py-3 text-xs tracking-[0.16em] whitespace-nowrap text-gold hover:bg-gold/10"
       >(464) 246-8403</a>
     </nav>
 
