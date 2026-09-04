@@ -3,67 +3,98 @@ export const site = {
   tagline: 'Plata Hecha a Mano',
   announcement: 'Complimentary hand engraving on every silver piece',
   email: 'hola@encanttodjoyas.com',
-};
+}
 
-export type NavItem = { label: string; href: string };
+export type NavItem = { label: string; href: string }
 
 export const nav: NavItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'Collections', href: '/collections' },
-    { label: 'About', href: '/about' },
-    { label: 'Visit Us', href: '/visit' },
-    { label: 'Contact', href: '/contact' },
-];
+  { label: 'Home', href: '/' },
+  { label: 'Collections', href: '/collections' },
+  { label: 'About', href: '/about' },
+  { label: 'Visit Us', href: '/visit' },
+  { label: 'Contact', href: '/contact' },
+]
 
-export type Product = { name: string; meta: string; price: string; placeholder: string };
+export type Product = {
+  name: string
+  meta: string
+  price: string
+  placeholder: string
+}
 
 export const signaturePieces: Product[] = [
-  { name: 'Filigrana Drop Earrings', meta: '.925 Silver \u00b7 Hand woven', price: '$185', placeholder: 'filigree earrings' },
-  { name: 'Trujano Wide Cuff', meta: '.925 Silver \u00b7 Forged & burnished', price: '$340', placeholder: 'silver cuff' },
-  { name: 'Encantto Pendant', meta: 'Silver & Oaxacan turquoise', price: '$260', placeholder: 'pendant with stone' },
-];
+  {
+    name: 'Filigrana Drop Earrings',
+    meta: '.925 Silver \u00b7 Hand woven',
+    price: '$185',
+    placeholder: 'filigree earrings',
+  },
+  {
+    name: 'Trujano Wide Cuff',
+    meta: '.925 Silver \u00b7 Forged & burnished',
+    price: '$340',
+    placeholder: 'silver cuff',
+  },
+  {
+    name: 'Encantto Pendant',
+    meta: 'Silver & Oaxacan turquoise',
+    price: '$260',
+    placeholder: 'pendant with stone',
+  },
+]
 
-export type Collection = { name: string; meta: string; blurb: string; placeholder: string };
+export type Collection = {
+  name: string
+  meta: string
+  blurb: string
+  placeholder: string
+}
 
 export const collections: Collection[] = [
   {
     name: 'Filigrana',
     meta: '18 pieces \u00b7 from $150',
-    blurb: 'Drawn silver wire coiled into lace. Earrings, chokers and combs in the traditional Oaxacan idiom.',
+    blurb:
+      'Drawn silver wire coiled into lace. Earrings, chokers and combs in the traditional Oaxacan idiom.',
     placeholder: 'filigrana collection',
   },
   {
     name: 'Forjado',
     meta: '12 pieces \u00b7 from $220',
-    blurb: 'Hammered cuffs and heavy rings, left with the honest texture of the anvil.',
+    blurb:
+      'Hammered cuffs and heavy rings, left with the honest texture of the anvil.',
     placeholder: 'forjado collection',
   },
   {
     name: 'Piedra',
     meta: '15 pieces \u00b7 from $195',
-    blurb: 'Silver set with turquoise, obsidian and amber sourced within the state of Oaxaca.',
+    blurb:
+      'Silver set with turquoise, obsidian and amber sourced within the state of Oaxaca.',
     placeholder: 'piedra collection',
   },
   {
     name: 'Novia',
     meta: 'Bespoke \u00b7 consultation',
-    blurb: 'Bridal and quincea\u00f1era commissions, engraved by hand with names and dates.',
+    blurb:
+      'Bridal and quincea\u00f1era commissions, engraved by hand with names and dates.',
     placeholder: 'novia collection',
   },
-];
+]
 
 export type Location = {
-  kind: string;
-  city: string;
-  address: string[];
-  phone: string;
-  phoneHref: string;
-  note?: string;
-  hours: { days: string; time: string }[];
-  mapUrl: string;
-  placeholder: string;
-  primary: boolean;
-};
+  kind: string
+  city: string
+  address: string[]
+  phone: string
+  phoneHref: string
+  note?: string
+  hours: { days: string; time: string }[]
+  mapUrl: string
+  placeholder: string
+  primary: boolean
+  imgSrc?: string
+  mapSrc?: string
+}
 
 export const locations: Location[] = [
   {
@@ -81,6 +112,9 @@ export const locations: Location[] = [
     mapUrl: 'https://maps.google.com/?q=2420+S+Laramie+Ave+Cicero+IL+60804',
     placeholder: 'storefront \u2014 cicero',
     primary: true,
+    imgSrc: '/public/cicero-entrance.png',
+    mapSrc:
+      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=Encantto%20D%E2%80%99%20Joyas&amp;maptype=roadmap&amp;zoom=16',
   },
   {
     kind: 'Atelier & Boutique \u00b7 M\u00e9xico',
@@ -92,8 +126,10 @@ export const locations: Location[] = [
       { days: 'Lunes \u2014 S\u00e1bado', time: '10:00 \u2013 20:00' },
       { days: 'Domingo', time: 'Cerrado' },
     ],
-    mapUrl: 'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
+    mapUrl:
+      'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
     placeholder: 'atelier \u2014 oaxaca',
     primary: false,
+    imgSrc: '/public/cicero-entrance.png',
   },
-];
+]
