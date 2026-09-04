@@ -38,28 +38,28 @@ export default function MobileNav({
         />
       </button>
 
-      {open && (
-        <div className='fixed inset-x-0 top-18.25 bottom-0 z-30 border-t border-gold/15 bg-night/98 px-8 py-10 backdrop-blur-md'>
-          <nav className='flex flex-col gap-2'>
-            {items.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className='border-b border-bone/10 py-5 font-display text-3xl font-light text-bone hover:text-gold'
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-          <a
-            href={`tel:${phone.replace(/[^0-9+]/g, '')}`}
-            className='mt-10 inline-block border border-gold/40 px-7 py-4 text-xs tracking-[0.2em] text-gold'
-          >
-            {phone}
-          </a>
-        </div>
-      )}
+      <div
+        className={`fixed inset-x-0 top-23.25 h-screen bottom-0 z-50 border-t border-gold/15 bg-night px-8 py-10 backdrop-blur-md transition-all duration-200 invisible opacity-0 ${open && 'visible opacity-100'}`}
+      >
+        <nav className='flex flex-col gap-2'>
+          {items.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className='border-b border-bone/10 py-5 font-display text-3xl font-light text-bone hover:text-gold'
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <a
+          href={`tel:${phone.replace(/[^0-9+]/g, '')}`}
+          className='mt-10 inline-block border border-gold/40 px-7 py-4 text-xs tracking-[0.2em] text-gold'
+        >
+          {phone}
+        </a>
+      </div>
     </div>
   )
 }
