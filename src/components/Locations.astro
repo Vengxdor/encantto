@@ -1,0 +1,60 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Placeholder from './Placeholder.astro';
+import { locations } from '../data/site';
+---
+
+<section id="locations" class="mx-auto max-w-310 px-6 py-24 md:px-8 md:py-28">
+  <div class="flex flex-col gap-5">
+    <Eyebrow>Visit Us</Eyebrow>
+    <h2 class="m-0 font-display text-[clamp(36px,4.6vw,62px)] leading-[1.1] font-light">
+      Two counters, one bench
+    </h2>
+    <p class="m-0 max-w-[56ch] text-base leading-[1.85] font-light text-mist">
+      Walk in, or reserve a private appointment for commissions and bridal fittings.
+    </p>
+  </div>
+
+  <div class="mt-14 flex flex-col gap-10">
+    {
+      locations.map((loc, i) => (
+        <article
+          class={`grid grid-cols-1 border lg:grid-cols-2 ${loc.primary ? 'border-gold/26 bg-night-3' : 'border-bone/15'}`}
+        >
+          <div class={`flex flex-col gap-6 px-8 py-12 md:px-14 ${i % 2 ? 'lg:order-2' : ''}`}>
+            <Eyebrow muted={!loc.primary}>{loc.kind}</Eyebrow>
+            <h3 class="m-0 font-display text-[clamp(30px,3vw,40px)] font-normal">{loc.city}</h3>
+            <p class="m-0 text-[17px] leading-[1.8] font-light text-[#c5beb4]">
+              {loc.address[0]}<br />{loc.address[1]}
+            </p>
+            <div class="flex flex-col gap-2.5">
+              <a href={loc.phoneHref} class="text-[19px] tracking-[0.04em]">{loc.phone}</a>
+              {loc.note && <span class="text-[13px] tracking-widest text-ash">{loc.note}</span>}
+            </div>
+            <dl class="m-0 flex flex-col gap-2.5 border-t border-gold/15 pt-6">
+              {
+                loc.hours.map((row) => (
+                  <div class="flex justify-between gap-6 text-sm font-light text-mist">
+                    <dt>{row.days}</dt>
+                    <dd class="m-0">{row.time}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+            <a
+              href={loc.mapUrl}
+              target="_blank"
+              rel="noopener"
+              class={`mt-2 self-start border px-7 py-3.5 text-[11px] tracking-[0.22em] uppercase ${loc.primary ? 'border-gold/40 text-gold hover:bg-gold/10' : 'border-bone/28 text-bone hover:border-gold hover:text-gold'}`}
+            >Get Directions</a>
+          </div>
+
+          <Placeholder
+            label={loc.placeholder}
+            class={`min-h-80 border-0 lg:min-h-130 ${i % 2 ? 'lg:order-1' : ''}`}
+          />
+        </article>
+      ))
+    }
+  </div>
+</section>

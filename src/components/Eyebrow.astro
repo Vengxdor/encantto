@@ -1,0 +1,11 @@
+---
+interface Props {
+  muted?: boolean;
+  class?: string;
+}
+const { muted = false, class: className = '' } = Astro.props;
+---
+
+<span
+  class={`text-[10px] tracking-[0.34em] uppercase ${muted ? 'text-ash' : 'text-gold'} ${className}`}
+><slot /></span>

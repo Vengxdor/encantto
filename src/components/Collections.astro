@@ -1,0 +1,62 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Placeholder from './Placeholder.astro';
+import { collections, signaturePieces } from '../data/site';
+---
+
+<section id="collections" class="mx-auto max-w-310 px-6 py-24 md:px-8 md:py-28">
+  <div class="flex flex-col items-start justify-between gap-6 border-b border-gold/15 pb-12 md:flex-row md:items-end">
+    <div class="flex flex-col gap-3.5">
+      <Eyebrow>Signature Pieces</Eyebrow>
+      <h2 class="m-0 font-display text-[clamp(32px,4vw,44px)] font-light tracking-[0.01em]">
+        Selected from the bench
+      </h2>
+    </div>
+    <a
+      href="#collections-index"
+      class="border-b border-gold/40 pb-1.5 text-[11px] tracking-[0.22em] uppercase text-gold hover:border-gold-light"
+    >All Collections</a>
+  </div>
+
+  <div class="grid grid-cols-1 gap-9 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      signaturePieces.map((piece) => (
+        <article class="flex flex-col gap-5">
+          <Placeholder label={piece.placeholder} class="aspect-3/4 w-full rounded-xs" />
+          <div class="flex flex-col gap-1.75">
+            <h3 class="m-0 font-display text-2xl font-normal">{piece.name}</h3>
+            <span class="text-xs tracking-[0.14em] uppercase text-ash">{piece.meta}</span>
+            <span class="text-[15px] font-light text-gold">{piece.price}</span>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div id="collections-index" class="mt-24 grid grid-cols-1 gap-14 border-t border-gold/15 pt-16 md:grid-cols-2 md:gap-x-11">
+    {
+      collections.map((collection) => (
+        <article class="flex flex-col gap-5">
+          <Placeholder label={collection.placeholder} class="aspect-square w-full rounded-xs" />
+          <div class="flex flex-col gap-2.5">
+            <h3 class="m-0 font-display text-[30px] font-normal">{collection.name}</h3>
+            <span class="text-[11px] tracking-[0.2em] uppercase text-gold">{collection.meta}</span>
+            <p class="m-0 max-w-[44ch] text-[15px] leading-[1.8] font-light text-[#a9a29a]">
+              {collection.blurb}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="mt-20 flex flex-wrap items-center justify-between gap-10 border-t border-gold/15 pt-14">
+    <p class="m-0 max-w-[34ch] font-display text-[30px] leading-[1.35] font-light">
+      Commission a piece &mdash; we&rsquo;ll sketch with you at the counter.
+    </p>
+    <a
+      href="mailto:hola@encanttodjoyas.com"
+      class="bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night"
+    >Enquire</a>
+  </div>
+</section>

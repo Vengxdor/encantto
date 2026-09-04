@@ -1,0 +1,48 @@
+---
+import Eyebrow from './Eyebrow.astro';
+
+const stats = [
+  { value: '.925', label: 'Sterling, always' },
+  { value: '14', label: 'Artisan partners' },
+  { value: '2', label: 'Boutiques' },
+];
+---
+
+<section id="feature" class="border-y border-gold/12 bg-night-2">
+  <div class="mx-auto grid max-w-310 grid-cols-1 items-center gap-14 px-6 py-24 md:px-8 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:py-26">
+    <div class="relative aspect-4/5 w-full overflow-hidden border border-gold/15 bg-[#1d1b15]">
+      <video
+        class="h-full w-full object-cover"
+        src="/video/atelier.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+      ></video>
+    </div>
+
+    <div class="flex flex-col gap-6">
+      <Eyebrow>The Craft</Eyebrow>
+      <h2 class="m-0 font-display text-[clamp(32px,3.6vw,48px)] leading-[1.15] font-light text-pretty">
+        Two hundred hours of hand work in a single collection.
+      </h2>
+      <p class="m-0 max-w-[52ch] text-base leading-[1.9] font-light text-mist text-pretty">
+        Filigree is drawn wire &mdash; thinner than thread &mdash; coiled, set and soldered one turn
+        at a time. It is a discipline passed down through families in the valleys of Oaxaca, and it
+        cannot be rushed or automated. What arrives in Cicero has already been touched a thousand
+        times.
+      </p>
+      <dl class="grid grid-cols-3 gap-7 border-t border-gold/15 pt-3.5">
+        {
+          stats.map((stat) => (
+            <div class="flex flex-col gap-2 pt-5">
+              <dt class="font-display text-[34px] font-normal text-gold">{stat.value}</dt>
+              <dd class="m-0 text-[11px] tracking-[0.18em] uppercase text-ash">{stat.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Collections from '../components/Collections.astro';
+import Feature from '../components/Feature.astro';
+import Locations from '../components/Locations.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Encantto D' Joyas \u2014 Handcrafted sterling silver from Oaxaca"
+  description="Hand-forged .925 sterling silver jewelry made by artisans in Oaxaca, finished and sold at our Cicero, Illinois boutique."
+>
+  <Header />
+  <main class="flex-1">
+    <Hero />
+    <Collections />
+    <Feature />
+    <Locations />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import { locations, nav, site } from '../data/site'
+---
+
+<footer class='border-t border-gold/12 bg-ink'>
+  <div
+    class='mx-auto grid max-w-310 grid-cols-1 gap-12 px-6 pt-20 pb-10 md:grid-cols-2 md:px-8 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-14'
+  >
+    <div class='flex flex-col gap-3.5'>
+      <span class='font-display text-2xl font-medium tracking-wider'
+        >{site.name}</span
+      >
+      <p class='m-0 max-w-[34ch] text-sm leading-[1.8] font-light text-ash'>
+        Handcrafted sterling silver from Oaxaca, finished and sold in Cicero,
+        Illinois.
+      </p>
+    </div>
+
+    {
+      locations.map((loc) => (
+        <div class='flex flex-col gap-3'>
+          <span
+            class={`text-[10px] tracking-[0.3em] uppercase ${loc.primary ? 'text-gold' : 'text-ash'}`}
+          >
+            {loc.city}
+          </span>
+          <span class='text-sm leading-[1.7] font-light text-[#a9a29a]'>
+            {loc.address[0]}
+            <br />
+            {loc.address[1]}
+          </span>
+          <a href={loc.phoneHref} class='text-sm'>
+            {loc.phone}
+          </a>
+        </div>
+      ))
+    }
+
+    <div class='flex flex-col items-start gap-3'>
+      <span class='text-[10px] tracking-[0.3em] uppercase text-ash'>Pages</span>
+      {
+        nav.map((item) => (
+          <a href={item.href} class='text-sm text-[#a9a29a] hover:text-bone'>
+            {item.label}
+          </a>
+        ))
+      }
+      <a
+        href={`mailto:${site.email}`}
+        class='text-sm text-[#a9a29a] hover:text-bone'>Contact</a
+      >
+    </div>
+  </div>
+
+  <div class='mx-auto max-w-310 px-6 pb-11 md:px-8'>
+    <div
+      class='flex flex-wrap justify-between gap-6 border-t border-bone/8 pt-6'
+    >
+      <span class='text-xs tracking-widest text-faint'>
+        &copy; {new Date().getFullYear()}
+        {site.name} &middot; All rights reserved
+      </span>
+      <span class='text-xs tracking-widest text-faint'>
+        .925 Sterling Silver &middot; Hecho a mano en Oaxaca
+      </span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #14120e;      /* page background */
+  --color-night-2: #1a1813;    /* raised band */
+  --color-night-3: #191713;    /* card */
+  --color-ink: #100f0c;        /* footer */
+  --color-bone: #ede9e2;       /* primary text */
+  --color-mist: #b4ada4;       /* body text */
+  --color-ash: #8f8880;        /* muted / labels */
+  --color-faint: #6f6961;      /* legal, placeholders */
+  --color-gold: #d9c39a;       /* accent */
+  --color-gold-light: #f0e4cb; /* accent hover */
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Jost', Helvetica, Arial, sans-serif;
+
+  --animate-rise: rise 900ms ease both;
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--color-night);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--color-gold); text-decoration: none; }
+  a:hover { color: var(--color-gold-light); }
+  ::placeholder { color: var(--color-faint); }
+}

@@ -1,0 +1,13 @@
+---
+interface Props {
+  label: string;
+  class?: string;
+}
+const { label, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`grid place-items-center border border-gold/15 bg-[repeating-linear-gradient(135deg,#242119_0_10px,#1b1914_10px_20px)] ${className}`}
+>
+  <span class="font-mono text-[10px] tracking-[0.16em] uppercase text-ash">{label}</span>
+</div>
