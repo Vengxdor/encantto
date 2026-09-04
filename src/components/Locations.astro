@@ -72,7 +72,7 @@ const { isMap } = Astro.props
           {isMap && <Maps src={loc.mapSrc} />}
           {!isMap && (
             <img
-              class='w-full h-full object-cover'
+              class='w-full h-full max-h-142.25 object-cover'
               loading='lazy'
               src={loc.imgSrc}
               alt={loc.address[0] + ' ' + 'Front entrance.'}

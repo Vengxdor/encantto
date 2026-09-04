@@ -130,6 +130,6 @@ export const locations: Location[] = [
       'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
     placeholder: 'atelier \u2014 oaxaca',
     primary: false,
-    imgSrc: '/public/cicero-entrance.png',
+    imgSrc: '/public/oax-entrance.png',
   },
 ]
