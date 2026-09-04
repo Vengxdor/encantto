@@ -1,47 +1,63 @@
 ---
-import Eyebrow from './Eyebrow.astro';
+import Eyebrow from './Eyebrow.astro'
 ---
 
 <section
-  id="hero"
-  class="grid min-h-[calc(100vh-121px)] grid-cols-1 border-b border-gold/12 lg:grid-cols-[1.05fr_1fr]"
+  id='hero'
+  class='relative grid min-h-[calc(100vh-92px)] grid-cols-1 overflow-hidden border-b border-gold/12 lg:h-1 lg:grid-cols-[1.05fr_1fr]'
 >
   <div
-    class="flex animate-rise flex-col justify-center gap-6 px-6 py-16 md:px-8 lg:py-14 lg:pr-16 lg:pl-[max(2rem,calc((100vw-1240px)/2+2rem))]"
+    class='relative z-10 flex animate-rise flex-col justify-center gap-6 px-6 py-16 md:px-8 lg:py-14 lg:pr-16 lg:pl-[max(2rem,calc((100vw-1240px)/2+2rem))]'
   >
     <Eyebrow>Oaxaca &middot; Chicago</Eyebrow>
     <h1
-      class="m-0 font-display text-[clamp(42px,5.4vw,76px)] leading-[1.05] font-light tracking-[-0.01em] text-pretty"
+      class='m-0 font-display text-[clamp(50px,5.4vw,76px)] leading-[1.05] font-light tracking-[-0.01em] text-pretty'
     >
       Silver shaped by hand,<br />
-      <em class="font-normal text-gold">worn for a lifetime.</em>
+      <em class='font-normal text-gold'>worn for a lifetime.</em>
     </h1>
-    <p class="m-0 max-w-[44ch] text-base leading-[1.85] font-light text-mist text-pretty">
-      Each piece is forged in .925 sterling by artisans in Oaxaca, then finished and fitted in our
-      Cicero atelier. No molds in bulk, no compromise &mdash; only work that carries the mark of a
-      maker.
+    <p
+      class='m-0 max-w-[44ch] text-base leading-[1.85] font-light text-mist text-pretty'
+    >
+      Each piece is forged in .925 sterling by artisans in Oaxaca, then finished
+      and fitted in our Cicero atelier. No molds in bulk, no compromise &mdash;
+      only work that carries the mark of a maker.
     </p>
-    <div class="flex flex-wrap gap-4 pt-2">
+    <div class='flex flex-wrap gap-4 pt-2'>
       <a
-        href="#collections"
-        class="bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night"
-      >View Collections</a>
+        href='#collections'
+        class='bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night'
+        >View Collections</a
+      >
       <a
-        href="#locations"
-        class="border border-bone/28 px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-bone hover:border-gold hover:text-gold"
-      >Visit the Atelier</a>
+        href='#locations'
+        class='border border-bone/28 px-9 py-4 text-[11px] tracking-[0.24em] uppercase text-bone hover:border-gold hover:text-gold'
+        >Visit the Atelier</a
+      >
     </div>
   </div>
 
-  <div class="relative min-h-[60vh] overflow-hidden bg-[#1b1914] lg:min-h-0 lg:border-l lg:border-gold/12">
+  <div
+    class='absolute inset-0 -z-10 overflow-hidden border-l border-gold/10 bg-panel-2 lg:relative'
+  >
     <video
-      class="h-full w-full object-cover"
-      src="/video/hero.mp4"
       autoplay
       muted
       loop
       playsinline
-      preload="metadata"
-    ></video>
+      class='block h-full w-full object-cover lg:hidden opacity-10'
+    >
+      <source src='/video/hero.mp4' type='video/mp4' />
+    </video>
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      class='hidden w-full object-cover lg:block'
+    >
+      <source src='/video/hero.mp4' type='video/mp4' />
+    </video>
   </div>
 </section>
