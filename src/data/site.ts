@@ -120,7 +120,7 @@ export const locations: Location[] = [
     kind: 'Atelier & Boutique \u00b7 M\u00e9xico',
     city: 'Oaxaca de Ju\u00e1rez',
     address: ['Calle de Valerio Trujano #219', 'Oaxaca de Ju\u00e1rez, Oax.'],
-    phone: '951-187-0735',
+    phone: '(+52) 951-187-0735',
     phoneHref: 'tel:+529511870735',
     hours: [
       { days: 'Lunes \u2014 S\u00e1bado', time: '10:00 \u2013 20:00' },
