@@ -33,7 +33,7 @@ export const signaturePieces: Product[] = [
     price: '$185',
     placeholder: 'engagement ring',
     img: {
-      src: '/public/home-collection/coll4.png',
+      src: '/home-collection/coll4.png',
       alt: 'Round diamond-style solitaire engagement ring on a wooden ring box',
     },
   },
@@ -43,7 +43,7 @@ export const signaturePieces: Product[] = [
     price: '$340',
     placeholder: 'ID bracelet',
     img: {
-      src: '/public/home-collection/coll5.png',
+      src: '/home-collection/coll5.png',
       alt: 'Sterling silver Cuban link ID bracelet with pavé accents',
     },
   },
@@ -53,7 +53,7 @@ export const signaturePieces: Product[] = [
     price: '$260',
     placeholder: 'heart pendant',
     img: {
-      src: '/public/home-collection/coll8.png',
+      src: '/home-collection/coll8.png',
       alt: 'Sterling silver heart-shaped pendant with an engraved Tree of Life design',
     },
   },
@@ -75,7 +75,7 @@ export const collections: Collection[] = [
     meta: 'Curb & link styles',
     blurb: 'Bold linked chains and bracelets, substantial without being heavy.',
     img: {
-      src: '/public/home-collection/coll11.png',
+      src: '/home-collection/coll11.png',
       alt: 'Sterling silver curb link bracelet displayed on a hand mannequin',
     },
   },
@@ -85,7 +85,7 @@ export const collections: Collection[] = [
     blurb:
       'Matching necklace, earring and ring sets in silver and deep blue stone.',
     img: {
-      src: '/public/home-collection/coll10.png',
+      src: '/home-collection/coll10.png',
       alt: 'Sterling silver necklace, earrings, and ring set with oval blue lapis-style stones',
     },
   },
@@ -95,7 +95,7 @@ export const collections: Collection[] = [
     blurb:
       'Hand-painted enamel pendants and earrings inspired by Mexican folk art.',
     img: {
-      src: '/public/home-collection/coll3.png',
+      src: '/home-collection/coll3.png',
       alt: 'Silver pendant with a hand-painted enamel Frida Kahlo-style figure, paired with red stud earrings',
     },
   },
@@ -104,7 +104,7 @@ export const collections: Collection[] = [
     meta: 'Layered chain necklaces',
     blurb: 'Multi-strand silver chains, layered for a fuller statement look.',
     img: {
-      src: '/public/home-collection/coll12.png',
+      src: '/home-collection/coll12.png',
       alt: 'Layered multi-strand sterling silver chain necklaces displayed on a bust',
     },
   },
@@ -141,7 +141,7 @@ export const locations: Location[] = [
     mapUrl: 'https://maps.google.com/?q=2420+S+Laramie+Ave+Cicero+IL+60804',
     placeholder: 'storefront \u2014 cicero',
     primary: true,
-    imgSrc: '/public/cicero-entrance.png',
+    imgSrc: '/cicero-entrance.png',
     mapSrc:
       'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=41.846947%20-87.754191&amp;maptype=roadmap&amp;zoom=16',
   },
@@ -159,7 +159,7 @@ export const locations: Location[] = [
       'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
     placeholder: 'atelier \u2014 oaxaca',
     primary: false,
-    imgSrc: '/public/oax-entrance.png',
+    imgSrc: '/oax-entrance.png',
     mapSrc:
       'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=17.060258%2C%20-96.7275049&amp;maptype=roadmap&amp;zoom=16',
   },
