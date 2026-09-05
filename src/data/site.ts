@@ -19,27 +19,43 @@ export type Product = {
   name: string
   meta: string
   price: string
+  img: {
+    src: string
+    alt: string
+  }
   placeholder: string
 }
 
 export const signaturePieces: Product[] = [
   {
-    name: 'Filigrana Drop Earrings',
-    meta: '.925 Silver \u00b7 Hand woven',
+    name: 'Solitaire Engagement Ring',
+    meta: '.925 Silver · Round cut stone',
     price: '$185',
-    placeholder: 'filigree earrings',
+    placeholder: 'engagement ring',
+    img: {
+      src: '/public/home-collection/coll4.png',
+      alt: 'Round diamond-style solitaire engagement ring on a wooden ring box',
+    },
   },
   {
-    name: 'Trujano Wide Cuff',
-    meta: '.925 Silver \u00b7 Forged & burnished',
+    name: 'ID Chain Bracelet',
+    meta: '.925 Silver · Cuban link, personalized',
     price: '$340',
-    placeholder: 'silver cuff',
+    placeholder: 'ID bracelet',
+    img: {
+      src: '/public/home-collection/coll5.png',
+      alt: 'Sterling silver Cuban link ID bracelet with pavé accents',
+    },
   },
   {
-    name: 'Encantto Pendant',
-    meta: 'Silver & Oaxacan turquoise',
+    name: 'Tree of Life Heart Pendant',
+    meta: 'Sterling Silver .925',
     price: '$260',
-    placeholder: 'pendant with stone',
+    placeholder: 'heart pendant',
+    img: {
+      src: '/public/home-collection/coll8.png',
+      alt: 'Sterling silver heart-shaped pendant with an engraved Tree of Life design',
+    },
   },
 ]
 
@@ -47,37 +63,50 @@ export type Collection = {
   name: string
   meta: string
   blurb: string
-  placeholder: string
+  img: {
+    src: string
+    alt: string
+  }
 }
 
 export const collections: Collection[] = [
   {
-    name: 'Filigrana',
-    meta: '18 pieces \u00b7 from $150',
-    blurb:
-      'Drawn silver wire coiled into lace. Earrings, chokers and combs in the traditional Oaxacan idiom.',
-    placeholder: 'filigrana collection',
+    name: 'Eslabón',
+    meta: 'Curb & link styles',
+    blurb: 'Bold linked chains and bracelets, substantial without being heavy.',
+    img: {
+      src: '/public/home-collection/coll11.png',
+      alt: 'Sterling silver curb link bracelet displayed on a hand mannequin',
+    },
   },
   {
-    name: 'Forjado',
-    meta: '12 pieces \u00b7 from $220',
+    name: 'Lapis Azul',
+    meta: 'Silver & blue stone sets',
     blurb:
-      'Hammered cuffs and heavy rings, left with the honest texture of the anvil.',
-    placeholder: 'forjado collection',
+      'Matching necklace, earring and ring sets in silver and deep blue stone.',
+    img: {
+      src: '/public/home-collection/coll10.png',
+      alt: 'Sterling silver necklace, earrings, and ring set with oval blue lapis-style stones',
+    },
   },
   {
-    name: 'Piedra',
-    meta: '15 pieces \u00b7 from $195',
+    name: 'Frida',
+    meta: 'Enamel & silver pendants',
     blurb:
-      'Silver set with turquoise, obsidian and amber sourced within the state of Oaxaca.',
-    placeholder: 'piedra collection',
+      'Hand-painted enamel pendants and earrings inspired by Mexican folk art.',
+    img: {
+      src: '/public/home-collection/coll3.png',
+      alt: 'Silver pendant with a hand-painted enamel Frida Kahlo-style figure, paired with red stud earrings',
+    },
   },
   {
-    name: 'Novia',
-    meta: 'Bespoke \u00b7 consultation',
-    blurb:
-      'Bridal and quincea\u00f1era commissions, engraved by hand with names and dates.',
-    placeholder: 'novia collection',
+    name: 'Capas',
+    meta: 'Layered chain necklaces',
+    blurb: 'Multi-strand silver chains, layered for a fuller statement look.',
+    img: {
+      src: '/public/home-collection/coll12.png',
+      alt: 'Layered multi-strand sterling silver chain necklaces displayed on a bust',
+    },
   },
 ]
 

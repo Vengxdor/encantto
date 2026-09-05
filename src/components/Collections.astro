@@ -22,7 +22,7 @@ import { collections, signaturePieces } from '../data/site';
     {
       signaturePieces.map((piece) => (
         <article class="flex flex-col gap-5">
-          <Placeholder label={piece.placeholder} class="aspect-3/4 w-full rounded-xs" />
+          <img class='aspect-3/4 w-full h-full rounded-xs object-cover ' src={piece.img.src} alt={piece.img.alt}>
           <div class="flex flex-col gap-1.75">
             <h3 class="m-0 font-display text-2xl font-normal">{piece.name}</h3>
             <span class="text-xs tracking-[0.14em] uppercase text-ash">{piece.meta}</span>
@@ -37,7 +37,7 @@ import { collections, signaturePieces } from '../data/site';
     {
       collections.map((collection) => (
         <article class="flex flex-col gap-5">
-          <Placeholder label={collection.placeholder} class="aspect-square w-full rounded-xs" />
+          <img class='aspect-square w-full h-full object-cover rounded-xs' src={collection.img.src} alt={collection.img.alt}>
           <div class="flex flex-col gap-2.5">
             <h3 class="m-0 font-display text-[30px] font-normal">{collection.name}</h3>
             <span class="text-[11px] tracking-[0.2em] uppercase text-gold">{collection.meta}</span>
