@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/Footer.astro'
+import Locations from '../components/Locations.astro'
+---
+
+<Layout
+  title="Visit Us \u2014 Encantto D' Joyas"
+  description='Hours, addresses and directions for our Cicero, Illinois boutique and our Oaxaca de Ju\u00e1rez atelier.'
+>
+  <main class='flex-1'>
+    <Locations isMap/>
+    <section class='mx-auto max-w-310 px-6 pb-28 md:px-8'>
+      <div
+        class='flex flex-wrap items-center justify-between gap-10 border-t border-gold/15 pt-14'
+      >
+        <p
+          class='m-0 max-w-[38ch] font-display text-[30px] leading-[1.35] font-light'
+        >
+          Prefer a private appointment? We&rsquo;ll hold the counter for you.
+        </p>
+        <a
+          href='/contact'
+          class='bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night'
+          >Book a Visit</a
+        >
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

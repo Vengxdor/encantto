@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import { principles } from '../data/site';
+---
+
+<Layout
+  title="About \u2014 Encantto D' Joyas"
+  description="Three generations of silversmiths from Calle de Valerio Trujano in Oaxaca, with a boutique in Cicero, Illinois since 2016."
+>
+  <main class="flex-1">
+    <section class="mx-auto grid max-w-310 grid-cols-1 items-start gap-14 px-6 pt-20 md:px-8 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
+      <div class="flex flex-col gap-6">
+        <Eyebrow>About</Eyebrow>
+        <h1 class="m-0 font-display text-[clamp(40px,4.4vw,60px)] leading-[1.1] font-light text-pretty">
+          A family trade, carried north.
+        </h1>
+        <p class="m-0 max-w-[56ch] text-[17px] leading-[1.9] font-light text-[#c5beb4] text-pretty">
+          Encantto D&rsquo; Joyas began at a small bench on Calle de Valerio Trujano, where three
+          generations learned to draw silver into thread. In 2016 we opened our Cicero boutique so
+          families across Chicagoland could hold the work in their hands rather than wait on a
+          parcel.
+        </p>
+        <p class="m-0 max-w-[56ch] text-base leading-[1.9] font-light text-[#a9a29a] text-pretty">
+          We buy sterling by weight, not by container. We pay our artisans by the piece and name
+          them on every tag. And we repair, re-polish and re-size anything we have ever sold &mdash;
+          for as long as we are open.
+        </p>
+      </div>
+      <img class='aspect-3/4 w-full h-full' src="/public/about.png" alt="Grant opening Cicero IL">
+    </section>
+
+    <section class="mx-auto max-w-310 px-6 py-24 md:px-8 md:py-28">
+      <dl class="m-0 grid grid-cols-1 gap-11 border-t border-gold/15 pt-14 md:grid-cols-3">
+        {
+          principles.map((p) => (
+            <div class="flex flex-col gap-3.5">
+              <dt class="font-display text-[26px] font-normal">{p.title}</dt>
+              <dd class="m-0 text-[15px] leading-[1.85] font-light text-[#a9a29a]">{p.body}</dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <div class="mt-24 flex flex-wrap items-center justify-between gap-10 border-t border-gold/15 pt-14">
+        <p class="m-0 max-w-[34ch] font-display text-[30px] leading-[1.35] font-light">
+          Come see the bench &mdash; both counters keep walk-in hours.
+        </p>
+        <a
+          href="/visit"
+          class="border border-gold/40 px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-gold hover:bg-gold/10"
+        >Visit Us</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

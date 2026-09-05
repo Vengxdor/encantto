@@ -143,7 +143,7 @@ export const locations: Location[] = [
     primary: true,
     imgSrc: '/public/cicero-entrance.png',
     mapSrc:
-      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=Encantto%20D%E2%80%99%20Joyas&amp;maptype=roadmap&amp;zoom=16',
+      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=41.846947%20-87.754191&amp;maptype=roadmap&amp;zoom=16',
   },
   {
     kind: 'Atelier & Boutique \u00b7 M\u00e9xico',
@@ -160,5 +160,32 @@ export const locations: Location[] = [
     placeholder: 'atelier \u2014 oaxaca',
     primary: false,
     imgSrc: '/public/oax-entrance.png',
+    mapSrc:
+      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=17.060258%2C%20-96.7275049&amp;maptype=roadmap&amp;zoom=16',
   },
+]
+
+export type Principle = { title: string; body: string }
+
+export const principles: Principle[] = [
+  {
+    title: 'Made, not assembled',
+    body: 'Every piece is cut, soldered and finished by a single artisan from start to end.',
+  },
+  {
+    title: 'Stone by hand',
+    body: 'Turquoise, obsidian and amber chosen at the quarry, matched piece to piece.',
+  },
+  {
+    title: 'Kept for life',
+    body: 'Complimentary polishing and re-sizing at either boutique, whenever you need it.',
+  },
+]
+
+export const enquiryTypes = [
+  'A commission',
+  'Repair or re-sizing',
+  'Bridal & quincea\u00f1era',
+  'Wholesale',
+  'Something else',
 ]

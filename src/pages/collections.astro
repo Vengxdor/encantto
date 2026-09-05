@@ -1,10 +1,96 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/Footer.astro'
+import PageHeader from '../components/PageHeader.astro'
+import Placeholder from '../components/ui/Placeholder.astro'
+import { collections, signaturePieces } from '../data/site'
 ---
 
 <Layout
-  title="Encantto D' Joyas \u2014 Handcrafted sterling silver from Oaxaca"
-  description='Hand-forged .925 sterling silver jewelry made by artisans in Oaxaca, finished and sold at our Cicero, Illinois boutique.'
+  title="Collections \u2014 Encantto D' Joyas"
+  description='Four families of handcrafted sterling silver: Filigrana, Forjado, Piedra and Novia bespoke commissions.'
 >
-  <div>Hello world</div>
+  <main class='flex-1'>
+    <PageHeader
+      eyebrow='Collections'
+      title='Four families of work'
+      lede='Pieces are made in small runs and rarely repeated. Sizes and stone selections can be commissioned at either boutique \u2014 allow four to six weeks for bespoke work.'
+      bordered
+    />
+
+    <section
+      class='mx-auto grid max-w-310 grid-cols-1 gap-14 px-6 pt-16 pb-10 md:grid-cols-2 md:gap-x-11 md:px-8'
+    >
+      {
+        collections.map((collection) => (
+          <article class='flex flex-col gap-5'>
+            <Placeholder
+              label='hi'
+              class='aspect-square w-full rounded-xs'
+            />
+            <div class='flex flex-col gap-2.5'>
+              <h2 class='m-0 font-display text-[30px] font-normal'>
+                {collection.name}
+              </h2>
+              <span class='text-[11px] tracking-[0.2em] uppercase text-gold'>
+                {collection.meta}
+              </span>
+              <p class='m-0 max-w-[44ch] text-[15px] leading-[1.8] font-light text-[#a9a29a]'>
+                {collection.blurb}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </section>
+
+    <section class='mx-auto max-w-310 px-6 py-16 md:px-8'>
+      <h2
+        class='m-0 border-t border-gold/15 pt-14 font-display text-[clamp(28px,3vw,38px)] font-light'
+      >
+        On the counter now
+      </h2>
+      <div class='grid grid-cols-1 gap-9 pt-12 sm:grid-cols-2 lg:grid-cols-3'>
+        {
+          signaturePieces.map((piece) => (
+            <article class='flex flex-col gap-5'>
+              <Placeholder
+                label={piece.placeholder}
+                class='aspect-3/4 w-full rounded-xs'
+              />
+              <div class='flex flex-col gap-1.75'>
+                <h3 class='m-0 font-display text-2xl font-normal'>
+                  {piece.name}
+                </h3>
+                <span class='text-xs tracking-[0.14em] uppercase text-ash'>
+                  {piece.meta}
+                </span>
+                <span class='text-[15px] font-light text-gold'>
+                  {piece.price}
+                </span>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class='mx-auto max-w-310 px-6 pb-28 md:px-8'>
+      <div
+        class='flex flex-wrap items-center justify-between gap-10 border-t border-gold/15 pt-14'
+      >
+        <p
+          class='m-0 max-w-[34ch] font-display text-[30px] leading-[1.35] font-light'
+        >
+          Commission a piece &mdash; we&rsquo;ll sketch with you at the counter.
+        </p>
+        <a
+          href='/contact'
+          class='bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night'
+          >Enquire</a
+        >
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>

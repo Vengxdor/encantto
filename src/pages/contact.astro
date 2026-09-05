@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import ContactForm from '../components/react/ContactForm';
+import { enquiryTypes, locations, site } from '../data/site';
+---
+
+<Layout
+  title="Contact \u2014 Encantto D' Joyas"
+  description="Repairs, re-sizing, commissions or wholesale \u2014 write to Encantto D' Joyas and we reply within one business day."
+>
+  <main class="flex-1">
+    <section class="mx-auto grid max-w-310 grid-cols-1 items-start gap-14 px-6 pt-20 pb-28 md:px-8 md:pt-24 lg:grid-cols-2 lg:gap-20">
+      <div class="flex flex-col gap-6">
+        <Eyebrow>Contact</Eyebrow>
+        <h1 class="m-0 font-display text-[clamp(40px,4.4vw,58px)] leading-[1.1] font-light text-pretty">
+          Tell us what you have in mind
+        </h1>
+        <p class="m-0 max-w-[46ch] text-base leading-[1.9] font-light text-mist text-pretty">
+          Repairs, re-sizing, commissions or wholesale &mdash; write to us and we reply within one
+          business day.
+        </p>
+
+        <div class="mt-3 flex flex-col gap-7 border-t border-gold/15 pt-9">
+          {
+            locations.map((loc) => (
+              <div class="flex flex-col gap-1.75">
+                <span
+                  class={`text-[10px] tracking-[0.3em] uppercase ${loc.primary ? 'text-gold' : 'text-ash'}`}
+                >
+                  {loc.primary ? 'United States' : 'M\u00e9xico'}
+                </span>
+                <a href={loc.phoneHref} class="text-xl tracking-[0.03em]">{loc.phone}</a>
+                <span class="text-sm font-light text-[#a9a29a]">
+                  {loc.address[0]}, {loc.address[1]}
+                </span>
+              </div>
+            ))
+          }
+          <div class="flex flex-col gap-1.75">
+            <span class="text-[10px] tracking-[0.3em] uppercase text-ash">Email</span>
+            <a href={`mailto:${site.email}`} class="text-[17px]">{site.email}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-gold/20 bg-night-3 px-7 py-11 md:px-11">
+        <ContactForm types={enquiryTypes} client:load />
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

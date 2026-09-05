@@ -1,0 +1,29 @@
+---
+import Eyebrow from './Eyebrow.astro'
+
+interface Props {
+  eyebrow: string
+  title: string
+  lede?: string
+  bordered?: boolean
+}
+const { eyebrow, title, lede, bordered = false } = Astro.props
+---
+
+<section
+  class={`${bordered ? 'border-b border-gold/15' : ''} mx-auto flex max-w-310 flex-col gap-5 px-6 pt-20 pb-14 md:px-8 md:pt-24`}
+>
+  <Eyebrow>{eyebrow}</Eyebrow>
+  <h1
+    class='m-0 font-display text-[clamp(40px,4.6vw,62px)] leading-[1.1] font-light text-pretty'
+  >
+    {title}
+  </h1>
+  {
+    lede && (
+      <p class='m-0 max-w-[58ch] text-base leading-[1.85] font-light text-mist text-pretty'>
+        {lede}
+      </p>
+    )
+  }
+</section>
