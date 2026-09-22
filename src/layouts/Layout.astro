@@ -34,3 +34,11 @@ const { title, description } = Astro.props
     <SpeedInsights />
   </body>
 </html>
+
+<script>
+  import { applyLanguage, getSavedLanguage } from '../lib/language'
+
+  document.addEventListener('astro:page-load', () => {
+    applyLanguage(getSavedLanguage())
+  })
+</script>
