@@ -9,31 +9,48 @@ import Eyebrow from './Eyebrow.astro'
   <div
     class='relative z-10 flex animate-rise flex-col justify-center gap-6 px-6 py-16 md:px-8 lg:py-14 lg:pr-16 lg:pl-[max(2rem,calc((100vw-1240px)/2+2rem))]'
   >
-    <Eyebrow>Oaxaca &middot; Chicago</Eyebrow>
+    <Eyebrow>Cicero</Eyebrow>
     <h1
       class='m-0 font-display text-[clamp(50px,5.4vw,76px)] leading-[1.05] font-light tracking-[-0.01em] text-pretty'
     >
-      Silver shaped by hand,<br />
-      <em class='font-normal text-gold'>worn for a lifetime.</em>
+      <span data-lang='en'>Silver shaped by hand,</span>
+      <span data-lang='es' class='hidden'>Plata moldeada a mano,</span>
+      <br />
+      <em data-lang='en' class='font-normal text-gold'>worn for a lifetime.</em>
+      <em data-lang='es' class='font-normal text-gold hidden'
+        >para llevar toda la vida.</em
+      >
     </h1>
     <p
       class='m-0 max-w-[44ch] text-base leading-[1.85] font-light text-mist text-pretty'
     >
-      Each piece is forged in .925 sterling by artisans in Oaxaca, then finished
-      and fitted in our Cicero atelier. No molds in bulk, no compromise &mdash;
-      only work that carries the mark of a maker.
+      <span data-lang='en'>
+        Each piece is forged in .925 sterling by artisans in Oaxaca, then
+        finished and fitted in our Cicero atelier. No molds in bulk, no
+        compromise &mdash; only work that carries the mark of a maker.
+      </span>
+      <span class='hidden' data-lang='es'>
+        Cada pieza es forjada en plata de ley .925 por artesanos de Oaxaca y,
+        posteriormente, acabada y ensamblada en nuestro taller de Cicero. Sin
+        moldes industriales ni concesiones &mdash; solo un trabajo que lleva el
+        sello de su creador.
+      </span>
     </p>
     <div class='flex flex-wrap gap-4 pt-2'>
       <a
         href='#collections'
         class='bg-gold px-8 py-4 text-[11px] tracking-[0.24em] uppercase text-night hover:bg-gold-light hover:text-night'
-        >View Collections</a
       >
+        <span data-lang='en'>View Collection</span>
+        <span class='hidden' data-lang='es'>Ver Colección</span>
+      </a>
       <a
         href='#locations'
         class='border border-bone/28 px-9 py-4 text-[11px] tracking-[0.24em] uppercase text-bone hover:border-gold hover:text-gold'
-        >Visit the Atelier</a
       >
+        <span data-lang='en'> Visit the Atelier</span>
+        <span class='hidden' data-lang='es'>Visita el taller</span>
+      </a>
     </div>
   </div>
 

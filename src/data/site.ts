@@ -12,7 +12,6 @@ export const nav: NavItem[] = [
   { label: 'Collections', href: '/collections' },
   { label: 'About', href: '/about' },
   { label: 'Visit Us', href: '/visit' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 export type Product = {
@@ -135,8 +134,7 @@ export const locations: Location[] = [
     note: 'Se habla espa\u00f1ol',
     hours: [
       { days: 'Monday \u2014 Friday', time: '10:00 \u2013 19:00' },
-      { days: 'Saturday', time: '10:00 \u2013 18:00' },
-      { days: 'Sunday', time: '11:00 \u2013 16:00' },
+      { days: 'Saturday \u2014 Sunday', time: 'Closed' },
     ],
     mapUrl: 'https://maps.google.com/?q=2420+S+Laramie+Ave+Cicero+IL+60804',
     placeholder: 'storefront \u2014 cicero',
@@ -145,24 +143,24 @@ export const locations: Location[] = [
     mapSrc:
       'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=41.846947%20-87.754191&amp;maptype=roadmap&amp;zoom=16',
   },
-  {
-    kind: 'Atelier & Boutique \u00b7 M\u00e9xico',
-    city: 'Oaxaca de Ju\u00e1rez',
-    address: ['Calle de Valerio Trujano #219', 'Oaxaca de Ju\u00e1rez, Oax.'],
-    phone: '(+52) 951-187-0735',
-    phoneHref: 'tel:+529511870735',
-    hours: [
-      { days: 'Lunes \u2014 S\u00e1bado', time: '10:00 \u2013 20:00' },
-      { days: 'Domingo', time: 'Cerrado' },
-    ],
-    mapUrl:
-      'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
-    placeholder: 'atelier \u2014 oaxaca',
-    primary: false,
-    imgSrc: '/oax-entrance.png',
-    mapSrc:
-      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=17.060258%2C%20-96.7275049&amp;maptype=roadmap&amp;zoom=16',
-  },
+  // {
+  //   kind: 'Atelier & Boutique \u00b7 M\u00e9xico',
+  //   city: 'Oaxaca de Ju\u00e1rez',
+  //   address: ['Calle de Valerio Trujano #219', 'Oaxaca de Ju\u00e1rez, Oax.'],
+  //   phone: '(+52) 951-187-0735',
+  //   phoneHref: 'tel:+529511870735',
+  //   hours: [
+  //     { days: 'Lunes \u2014 S\u00e1bado', time: '10:00 \u2013 20:00' },
+  //     { days: 'Domingo', time: 'Cerrado' },
+  //   ],
+  //   mapUrl:
+  //     'https://maps.google.com/?q=Calle+de+Valerio+Trujano+219+Oaxaca+de+Juarez',
+  //   placeholder: 'atelier \u2014 oaxaca',
+  //   primary: false,
+  //   imgSrc: '/oax-entrance.png',
+  //   mapSrc:
+  //     'https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=17.060258%2C%20-96.7275049&amp;maptype=roadmap&amp;zoom=16',
+  // },
 ]
 
 export type Principle = { title: string; body: string }
